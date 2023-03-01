@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    margin: 0px;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+#header {
+    grid-area: he;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0 0 0 20px;
+    width: 140px;
+    height: 200px;
+    position: absolute;
+    right: -70px;
+    top: -130px;
+    z-index: 1;
+    transition: all 0.3s;
+}
+
+#header_nav {
+    height: 150px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    left: 100px;
+    bottom: 150px;
+    transition: all 0.3s;
+}
+
+.menu_open {
+    transform: translate(-70px, 130px);
+}
+
+#menu_button {
+    display: initial;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    transition: all 0.3s;
+}
+
+.menu_button_open {
+    transform: scale(-1, -1);
+}
+
+.header_nav_link {
+    color: black;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.header_nav_link:hover {
+    font-size: 120%;
+}
+
+#home_grid_wrapper {
+    background-color: rgb(45, 45, 45);
+    display: grid;
+    position: relative;
+
+    grid-template-columns: 100vw;
+    grid-template-rows: 40px 300px 200px 50px;
+    grid-template-areas: 
+    "he"
+    "s1"
+    "s2"
+    "bl";
+    height: 100vh;
+    width: 100vw;
+}
+
+#home_title {
+    grid-area: s1;
+
+    justify-self: center;
+    align-self: center;
+
+    font-size: 100px;
+    color: rgb(76, 152, 82);
+}
+
+#home_info_card {
+    grid-area: s2;
+    justify-self: center;
+
+    width: 250px;
+    height: 140px;
+
+    background-color: rgb(74, 148, 222);
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* desktop version */
+@media screen and (min-width: 700px) {
+    #header {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 0;
+        height: 40px;
+        width: 100%;
+    }
+    
+    #header_nav {
+        width: 300px;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        left: 0.7%;
+        top: 0;
+        transform: none;
+    }
+
+    #menu_button {
+        display: none;
+    }
+
+    .menu_open {
+        transform: translate(0px, 0px);
+    }
+}
