@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>lomstfer</title>
+</head>
+<body>
+    <div id="contact_grid_wrapper">
+        <header id="header">
+            <nav id="header_nav">
+                <a href="index.html" class="header_nav_link" id="header_nav_link_home">HOME</a>
+                <a href="games.html" class="header_nav_link" id="header_nav_link_games">MY GAMES</a>
+                <a href="contact.html" class="header_nav_link" id="header_nav_link_contact">CONTACT</a>
+            </nav>
+
+            <img src="img/arrow_triangle.png" alt="menu_arrow" id="menu_button">
+        </header>
+        
+        <h1 id="contact_title">Contact me</h1>
+        <form id="contact_form"
+            action="https://formspree.io/f/xrgvkwqp"
+            method="POST"
+            >
+
+            <label>
+                <p>Name:</p>
+                <input type="name" name="name" required="true">
+            </label>
+
+            <label>
+                <p>Email:</p>
+                <input type="email" name="email" required="true">
+            </label>
+
+            <label>
+                <p>Message:</p>
+                <textarea name="message" required="true"></textarea>
+            </label>
+
+            <button type="submit" id="contact_submit_button">
+                <p>Send</p>
+            </button>
+        </form>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
